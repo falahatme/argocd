@@ -48,6 +48,7 @@ kubectl port-forward svc/argcd-server -n argocd 8080:443
 ## Browse Dashboard
 
 in browser: [clusterIP]:8080
+
 default user: admin
 
 
