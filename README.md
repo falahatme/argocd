@@ -51,5 +51,15 @@ in browser: [clusterIP]:8080
 
 default user: admin
 
+## Change Argo-CD admin password using CLI
+
+```
+argocd login localhost:8080
+argocd account update-password
+```
+
+
+# Deploy docker image with Argo-CD
+
 
 
