@@ -28,3 +28,27 @@ argocd version --client
 kubectl -n argocd get all
 ```
 
+## Use Argo-CD By CLI
+
+```
+# Expose argocd-server service
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+kubectl -n argocd get srvices
+```
+
+## Dashboard Password
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo 
+```
+
+```
+kubectl port-forward svc/argcd-server -n argocd 8080:443
+```
+
+## Browse Dashboard
+
+in browser: [clusterIP]:8080
+default user: admin
+
+
+
