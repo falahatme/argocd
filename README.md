@@ -33,7 +33,7 @@ kubectl -n argocd get all
 ```
 # Expose argocd-server service
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
-kubectl -n argocd get srvices
+kubectl -n argocd get services
 ```
 
 ## Dashboard Password
